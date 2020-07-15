@@ -1,0 +1,53 @@
+.highlight-line {
+	display: block;
+	padding: 0.125em 1em;
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+
+	/* allow highlighting empty lines */
+	&:empty:before {
+		content: " ";
+	}
+
+	/* avoid double line breaks when using display: block; */
+	& + br {
+		display: none;
+	}
+
+	&-isdir {
+		color: #b0b0b0;
+		background-color: #222;
+	}
+	&-active {
+		background-color: #444;
+		background-color: hsla(0, 0%, 27%, .8);
+	}
+
+	&-add {
+		background-color: #45844b;
+	}
+
+	&-remove {
+		background-color: #902f2f;
+	}
+}
+
+.u-center-text {
+	text-align: center !important;
+}
+.u-margin-bottom-big {
+	margin-bottom: 8rem !important;
+}
+
+.u-margin-bottom-medium {
+	margin-bottom: 4rem !important;
+}
+.u-margin-bottom-small {
+	margin-bottom: 1.5rem !important;
+}
+.u-margin-top-big {
+	margin-top: 8rem !important;
+}
+.u-margin-top-huge {
+	margin-top: 10rem !important;
+}

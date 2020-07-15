@@ -1,0 +1,44 @@
+header {
+	grid-column: 1/13;
+
+	border-bottom: 1px dashed $lightgray;
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.title {
+		padding: 0 1rem;
+		float: left;
+		margin: 1rem 0;
+		font-size: 1em;
+		a {
+			text-decoration: none;
+		}
+
+		&:link:not(:hover) {
+			text-decoration: none;
+		}
+	}
+	.nav {
+		display: flex;
+		justify-content: flex-end;
+		padding: 0;
+		list-style: none;
+
+		&-item {
+			display: inline-block;
+			margin-right: 1em;
+
+			a[href]:not(:hover) {
+				text-decoration: none;
+			}
+
+			&-active {
+				font-weight: 700;
+				text-decoration: underline;
+			}
+		}
+	}
+}

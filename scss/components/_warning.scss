@@ -1,0 +1,8 @@
+.warning {
+	background-color: #ffc;
+	padding: 1em 0.625em;
+
+	& ol:only-child {
+		margin: 0;
+	}
+}

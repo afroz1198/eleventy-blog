@@ -1,0 +1,34 @@
+.postlist {
+	list-style: none;
+	padding: 0;
+
+	&-item {
+		counter-increment: start-from -1;
+
+		&:before {
+			display: inline-block;
+			pointer-events: none;
+			content: "" counter(start-from, decimal-leading-zero) ". ";
+			line-height: 100%;
+			text-align: right;
+			color: var(--darkgray);
+		}
+
+		&-active {
+			font-weight: bold;
+		}
+	}
+
+	&-date {
+		color: $darkgray;
+		word-spacing: -0.5px;
+	}
+
+	&-link {
+		display: inline-block;
+		padding: 0.25em 0.1875em;
+		text-decoration: none;
+		font-size: 1.1875em;
+		font-weight: 700;
+	}
+}

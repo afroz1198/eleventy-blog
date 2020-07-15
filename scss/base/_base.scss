@@ -1,0 +1,94 @@
+* {
+	box-sizing: border-box;
+}
+html {
+	/* font-size: 16px; (browser default)*/
+	/* defines what 1rem is */
+	/* font-size: 62.5%; */
+	font-size: calc(15px + 0.25vw);
+}
+body {
+	padding: 0;
+	max-width: 75%;
+	margin: 0 auto;
+	font-family: system-ui, sans-serif;
+	color: $darkgray;
+	background-color: $white;
+}
+@media all and (min-width: 768px) {
+	.content-wrapper {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-gap: .5rem 1.5rem;
+	}
+}
+
+a[href] {
+	color: $blue;
+
+	&:visited {
+		color: $navy;
+	}
+}
+
+code {
+	font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter",
+		"DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier,
+		monospace;
+	line-height: 1.5;
+}
+
+main {
+	margin: 0 auto;
+	grid-column: 1/13;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p,
+.tmpl-post li,
+img {
+	max-width: 37.5em; /* 600px /16 */
+}
+p,
+.tmpl-post li {
+	line-height: 1.45;
+}
+pre,
+pre {
+	font-size: 14px;
+	line-height: 1.375;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
+	tab-size: 2;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	padding: 1em;
+	margin: .5em 0;
+	background-color: #f6f6f6;
+}
+
+table {
+	margin: 1em 0;
+
+	td,
+	th {
+		padding-right: 1em;
+	}
+}
+
+ul {
+	padding: 0;
+}
