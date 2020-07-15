@@ -11,7 +11,7 @@
 			content: "" counter(start-from, decimal-leading-zero) ". ";
 			line-height: 100%;
 			text-align: right;
-			color: var(--darkgray);
+			color: $darkgray;
 		}
 
 		&-active {
