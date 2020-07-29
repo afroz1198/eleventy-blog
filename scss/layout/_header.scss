@@ -1,6 +1,6 @@
 header {
 	grid-column: 1/13;
-
+	position: relative;
 	border-bottom: 1px dashed $lightgray;
 
 	&:after {
@@ -22,8 +22,9 @@ header {
 		}
 	}
 	.nav {
-		display: flex;
-		justify-content: flex-end;
+		position: absolute;
+		display: inline-block;
+		right: 0;
 		padding: 0;
 		list-style: none;
 
