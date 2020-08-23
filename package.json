@@ -3,20 +3,21 @@
 	"version": "5.0.2",
 	"description": "A starter repository for a blog web site using the Eleventy static site generator.",
 	"scripts": {
-		"compile-sass": "node-sass scss/index.scss css/index.css -w",
-		"build": "eleventy",
+		"minify:prism-theme": "gulp minify_prism_theme",
+		"serve": "eleventy --serve",
 		"watch": "eleventy --watch",
-		"serve": "gulp watch & eleventy --serve",
-		"debug": "DEBUG=* eleventy"
+		"dev": "gulp watch & yarn serve",
+		"debug": "DEBUG=* eleventy",
+		"deploy": "eleventy --pathprefix=eleventy-blog --output docs && gh-pages -d docs -b deploy"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/11ty/eleventy-base-blog.git"
 	},
 	"author": {
-		"name": "Zach Leatherman",
-		"email": "zachleatherman@gmail.com",
-		"url": "https://zachleat.com/"
+		"name": "Afroz Mohammad",
+		"email": "mohammedafroz.1198@gmail.com",
+		"url": "https://"
 	},
 	"license": "MIT",
 	"bugs": {
@@ -34,11 +35,7 @@
 		"luxon": "^1.21.3",
 		"markdown-it": "^8.4.2",
 		"markdown-it-anchor": "^5.2.5",
-		"node-sass": "^4.14.1"
+		"gh-pages": "^3.1.0"
 	},
-	"dependencies": {
-		"axios": "^0.19.2",
-		"eleventy-plugin-embed-tweet": "^0.3.0",
-		"twitter": "^1.7.1"
-	}
+	"dependencies": {}
 }

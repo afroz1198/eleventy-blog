@@ -5,16 +5,8 @@ const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginNavigation = require('@11ty/eleventy-navigation');
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
-let pluginEmbedTweet = require('eleventy-plugin-embed-tweet');
-
-let tweetEmbedOptions = {
-	cacheDirectory: '', // default: ''
-	useInlineStyles: true, // default: true
-	autoEmbed: false // default: false
-};
 
 module.exports = function(eleventyConfig) {
-	eleventyConfig.addPlugin(pluginEmbedTweet, tweetEmbedOptions);
 	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addPlugin(pluginSyntaxHighlight);
 	eleventyConfig.addPlugin(pluginNavigation);
@@ -41,7 +33,7 @@ module.exports = function(eleventyConfig) {
 		return array.slice(0, n);
 	});
 
-	eleventyConfig.addCollection('tagList', require('./_11ty/getTagList'));
+	eleventyConfig.addCollection('tagList', require('./tags/getTagList'));
 
 	eleventyConfig.addPassthroughCopy('img');
 	eleventyConfig.addPassthroughCopy('css');
