@@ -5,10 +5,15 @@
 	font-size: 0.625em;
 	padding: 2px 4px;
 	margin-left: 0.8em;
-	background-color: $red;
+	background-color: darkblue;
 	color: $white;
 	border-radius: 0.25em;
 	text-decoration: none;
+	transition: all .2s ease;
+	&:hover {
+		transform: scale(1.2);
+		background-color: palevioletred;
+	}
 }
 
 a[href].tag {
